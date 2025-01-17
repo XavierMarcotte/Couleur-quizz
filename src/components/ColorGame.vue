@@ -2,12 +2,14 @@
 import { ref, onMounted } from "vue";
 import color from "../data/color.js";
 import Header from "./Header.vue";
+import { useRouter } from "vue-router";
 
 const selectedColors = ref(color);
 const randomColor = ref("");
 const message = ref("");
 const messageType = ref("");
 const displayedColors = ref([]);
+const router = useRouter();
 
 const getRandomColor = () => {
   const randomIndex = Math.floor(Math.random() * selectedColors.value.length);
@@ -38,7 +40,9 @@ onMounted(() => {
 });
 
 const reloadPage = () => {
-  window.location.reload();
+  router.push("/").then(() => {
+    router.replace("/color");
+  });
 };
 </script>
 
