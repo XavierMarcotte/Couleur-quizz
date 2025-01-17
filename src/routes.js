@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "./components/HomePage.vue";
-import NameGame from "./components/NameGame.vue";
+import NameGameVue from "./components/Namegame.vue";
 import ColorGame from "./components/ColorGame.vue";
 
 const routes = [
@@ -12,8 +12,8 @@ const routes = [
   },
   {
     path: "/name",
-    name: "NameGame",
-    component: NameGame,
+    name: "NameGameVue",
+    component: NameGameVue,
   },
   {
     path: "/color",
