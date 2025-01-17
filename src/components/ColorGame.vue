@@ -38,7 +38,7 @@ const handleColorClick = (color) => {
 onMounted(() => {
   getRandomColor();
 });
-
+//Pour gérer le rechargement de la page en production
 const reloadPage = () => {
   router.push("/").then(() => {
     router.replace("/color");
